@@ -61,3 +61,66 @@ document.getElementById('copy-iban')?.addEventListener('click', async () => {
     status.textContent = 'IBAN kopiert. Bitte den Kontoinhaber vor der Überweisung beim Verein prüfen.';
   } catch { status.textContent = 'Bitte kopiere die IBAN aus der Bankverbindung oben.'; }
 });
+
+document.querySelectorAll('[data-instagram-deck]').forEach(deck => {
+  const cards = [...deck.querySelectorAll('[data-instagram-card]')];
+  const section = deck.closest('.instagram-section');
+  const status = section?.querySelector('.instagram-status');
+  const dots = [...(section?.querySelectorAll('[data-instagram-dot]') || [])];
+  let activeIndex = 0;
+  let pointerStart = null;
+  let dragged = false;
+
+  const render = () => {
+    cards.forEach((card, index) => {
+      const distance = (index - activeIndex + cards.length) % cards.length;
+      const state = distance === 0 ? 'active' : distance === 1 ? 'next' : 'previous';
+      card.dataset.state = state;
+      card.setAttribute('aria-hidden', String(state !== 'active'));
+      card.querySelectorAll('a, button').forEach(control => {
+        control.tabIndex = state === 'active' ? 0 : -1;
+      });
+    });
+    dots.forEach((dot, index) => {
+      if (index === activeIndex) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+    if (status) status.textContent = `${activeIndex + 1} von ${cards.length}`;
+  };
+
+  const show = index => {
+    activeIndex = (index + cards.length) % cards.length;
+    render();
+  };
+
+  section?.querySelector('[data-instagram-prev]')?.addEventListener('click', () => show(activeIndex - 1));
+  section?.querySelector('[data-instagram-next]')?.addEventListener('click', () => show(activeIndex + 1));
+  dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
+  deck.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); show(activeIndex - 1); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(activeIndex + 1); }
+  });
+  deck.addEventListener('pointerdown', event => {
+    pointerStart = { x: event.clientX, y: event.clientY };
+    dragged = false;
+  });
+  deck.addEventListener('pointermove', event => {
+    if (!pointerStart) return;
+    if (Math.abs(event.clientX - pointerStart.x) > 12) dragged = true;
+  });
+  deck.addEventListener('pointerup', event => {
+    if (!pointerStart) return;
+    const dx = event.clientX - pointerStart.x;
+    const dy = event.clientY - pointerStart.y;
+    pointerStart = null;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) show(activeIndex + (dx < 0 ? 1 : -1));
+  });
+  deck.addEventListener('pointercancel', () => { pointerStart = null; });
+  deck.addEventListener('click', event => {
+    if (!dragged) return;
+    event.preventDefault();
+    dragged = false;
+  }, true);
+
+  render();
+});
