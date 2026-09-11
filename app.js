@@ -93,8 +93,8 @@ document.querySelectorAll('[data-instagram-deck]').forEach(deck => {
     render();
   };
 
-  section?.querySelector('[data-instagram-prev]')?.addEventListener('click', () => show(activeIndex - 1));
-  section?.querySelector('[data-instagram-next]')?.addEventListener('click', () => show(activeIndex + 1));
+  section?.querySelectorAll('[data-instagram-prev]').forEach(button => button.addEventListener('click', () => show(activeIndex - 1)));
+  section?.querySelectorAll('[data-instagram-next]').forEach(button => button.addEventListener('click', () => show(activeIndex + 1)));
   dots.forEach((dot, index) => dot.addEventListener('click', () => show(index)));
   deck.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') { event.preventDefault(); show(activeIndex - 1); }

@@ -204,7 +204,11 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 .instagram-controls button{min-height:44px;padding:9px 15px;border:1px solid #aaa;border-radius:7px;background:#fff;font-weight:700}
 .instagram-controls button:hover{background:#111;color:#fff;border-color:#111}
 .instagram-status{min-width:58px;text-align:center;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
-.instagram-deck{display:grid;grid-template-columns:1fr;touch-action:pan-y;outline-offset:8px;min-width:0;-webkit-user-select:none;user-select:none}
+.instagram-deck{position:relative;display:grid;grid-template-columns:1fr;touch-action:pan-y;outline-offset:8px;min-width:0;-webkit-user-select:none;user-select:none}
+.instagram-side-arrow{position:absolute;top:50%;z-index:5;width:52px;height:52px;display:grid;place-items:center;transform:translateY(-50%);border:1px solid #111;border-radius:50%;background:#111;color:#fff;font-family:Arial,sans-serif;font-size:2.25rem;line-height:1;padding:0 0 5px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.instagram-side-arrow:hover{background:#fff;color:#111}
+.instagram-side-prev{left:4px}
+.instagram-side-next{right:4px}
 .instagram-card{grid-area:1/1;width:calc(100% - clamp(38px,8vw,112px));justify-self:center;display:grid;grid-template-columns:minmax(300px,.86fr) minmax(0,1.14fr);background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.12);transition:transform .42s cubic-bezier(.2,.75,.25,1),opacity .3s;will-change:transform,opacity}
 .instagram-card[data-state="active"]{position:relative;z-index:3;transform:translateX(0) rotate(0) scale(1);opacity:1;pointer-events:auto}
 .instagram-card[data-state="previous"]{z-index:1;transform:translateX(-7%) rotate(-1.2deg) scale(.94);opacity:.45;pointer-events:none}
@@ -223,6 +227,7 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 .instagram-dots button[aria-current="true"]:after{background:#111;transform:scaleX(1.55)}
 .instagram-hint{text-align:center;color:#666;font-size:.78rem;margin-top:3px}
 @media(max-width:760px){
+ .instagram-side-arrow{display:none}
  .instagram-heading{align-items:flex-start;margin-bottom:24px}
  .instagram-heading h2{font-size:2.7rem}
  .instagram-controls{width:100%;justify-content:space-between;margin-top:20px}
