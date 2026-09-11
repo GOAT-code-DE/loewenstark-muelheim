@@ -183,3 +183,10 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
  .footer-bottom a,.footer-bottom button{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem}
  .footer-bottom>div{gap:4px 18px}
 }
+
+/* Textbuttons ohne dekorative Symbolzusätze. */
+.button,.header .menu-toggle{justify-content:center;text-align:center}
+@media(max-width:600px){
+ main .button.button,footer .button,dialog .button,
+ main .text-button.text-button,main .network-partner>a{justify-content:center;text-align:center;gap:0}
+}
