@@ -200,10 +200,6 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 /* Aktuelles: überlappender, wischbarer Instagram-Kartenstapel ohne Drittanbieter-Skript. */
 .instagram-section{background:#f3f3f3;border-block:1px solid var(--line);overflow:hidden}
 .instagram-heading{align-items:center}
-.instagram-controls{display:flex;align-items:center;gap:13px}
-.instagram-controls button{min-height:44px;padding:9px 15px;border:1px solid #aaa;border-radius:7px;background:#fff;font-weight:700}
-.instagram-controls button:hover{background:#111;color:#fff;border-color:#111}
-.instagram-status{min-width:58px;text-align:center;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .instagram-deck{position:relative;display:grid;grid-template-columns:1fr;touch-action:pan-y;outline-offset:8px;min-width:0;-webkit-user-select:none;user-select:none}
 .instagram-side-arrow{position:absolute;top:50%;z-index:5;width:52px;height:52px;display:grid;place-items:center;transform:translateY(-50%);border:1px solid #111;border-radius:50%;background:#111;color:#fff;font-family:Arial,sans-serif;font-size:2.25rem;line-height:1;padding:0 0 5px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .instagram-side-arrow:hover{background:#fff;color:#111}
@@ -230,7 +226,6 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
  .instagram-side-arrow{display:none}
  .instagram-heading{align-items:flex-start;margin-bottom:24px}
  .instagram-heading h2{font-size:2.7rem}
- .instagram-controls{width:100%;justify-content:space-between;margin-top:20px}
  .instagram-card{grid-template-columns:1fr;width:calc(100% - 30px)}
  .instagram-copy{padding:27px 23px 25px}
  .instagram-copy h3{font-size:2rem}
