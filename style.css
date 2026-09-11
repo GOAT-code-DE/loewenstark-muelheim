@@ -196,3 +196,19 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
  position:sticky;top:0;z-index:80;background:var(--paper);
  border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.08)
 }
+
+/* Aktuelles: redaktionell eingebundener Instagram-Beitrag ohne Drittanbieter-Skript. */
+.instagram-section{background:#f3f3f3;border-block:1px solid var(--line)}
+.instagram-card{display:grid;grid-template-columns:minmax(300px,.86fr) minmax(0,1.14fr);background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.instagram-visual{display:block;aspect-ratio:1/1;background:#e8e8e8;overflow:hidden}
+.instagram-visual img{object-fit:cover}
+.instagram-copy{padding:clamp(30px,5vw,68px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.instagram-copy h3{font-size:clamp(2rem,3.4vw,3.3rem);margin:15px 0 20px;line-height:1.06}
+.instagram-copy>p:not(.eyebrow){max-width:610px;color:var(--muted)}
+.instagram-copy .instagram-credit{font-size:.82rem;margin-top:18px;color:#666}
+.instagram-copy .text-button{margin-top:27px}
+@media(max-width:760px){
+ .instagram-card{grid-template-columns:1fr}
+ .instagram-copy{padding:30px 25px}
+ .instagram-copy h3{font-size:2.2rem}
+}
