@@ -253,7 +253,7 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 .job-card{padding:38px;border:1px solid var(--line);border-radius:18px;background:#f4f4f4;display:flex;flex-direction:column;align-items:flex-start}
 .job-card-dark{background:#050505;color:#fff;border-color:#050505}
 .job-type{font-size:.68rem;letter-spacing:.14em;font-weight:800;border:1px solid currentColor;border-radius:99px;padding:7px 11px}
-.job-card h3{font-size:clamp(1.8rem,2.7vw,2.7rem);line-height:1.08;margin:24px 0 18px}
+.job-card h2,.job-card h3{font-size:clamp(1.7rem,2.4vw,2.25rem);line-height:1.2;letter-spacing:-.025em;margin:22px 0 16px;text-wrap:balance;overflow-wrap:break-word}.jobs-lead{margin-bottom:36px}.jobs-lead>p:not(.eyebrow){max-width:760px;margin-top:24px;color:var(--muted)}
 .job-card>p{color:var(--muted)}.job-card-dark>p{color:#ccc}
 .job-card dl{width:100%;margin:27px 0}.job-card-dark dt,.job-card-dark dd{border-color:#444}.job-card-dark dd{color:#ddd}
 .job-card .button{width:100%;margin-top:auto}.jobs-note{font-size:.82rem;color:var(--muted);margin-top:20px}
