@@ -191,10 +191,8 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
  main .text-button.text-button,main .network-partner>a{justify-content:center;text-align:center;gap:0}
 }
 
-/* Mobile Navigation: fester Kopf. */
-@media(max-width:600px){
- .header{
-  position:sticky;top:0;z-index:80;background:var(--paper);
-  border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.08)
- }
+/* Navigation: fester Kopf auf allen Bildschirmgrößen. */
+.header{
+ position:sticky;top:0;z-index:80;background:var(--paper);
+ border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.08)
 }
