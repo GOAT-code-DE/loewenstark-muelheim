@@ -271,4 +271,6 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 #contact-form input,#contact-form select,#contact-form textarea{min-height:52px}
 #contact-form textarea{min-height:170px}
 #contact-form input:focus-visible,#contact-form select:focus-visible,#contact-form textarea:focus-visible{outline-offset:3px}
+#contact-form .form-note{margin-top:22px;margin-bottom:18px;line-height:1.55}
+#contact-form .form-note+.button{margin-top:0}
 
