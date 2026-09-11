@@ -191,27 +191,10 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
  main .text-button.text-button,main .network-partner>a{justify-content:center;text-align:center;gap:0}
 }
 
-/* Mobile Navigation: fester Kopf und feste Schnellaktionen. */
-.mobile-action-bar{display:none}
+/* Mobile Navigation: fester Kopf. */
 @media(max-width:600px){
- body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
  .header{
   position:sticky;top:0;z-index:80;background:var(--paper);
   border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.08)
  }
- .mobile-action-bar{
-  position:fixed;left:0;right:0;bottom:0;z-index:90;
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;
-  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-  background:var(--black);color:var(--white);
-  border-top:1px solid #333;box-shadow:0 -8px 24px rgba(0,0,0,.18)
- }
- .mobile-action-bar a{
-  display:flex;align-items:center;justify-content:center;min-width:0;min-height:52px;
-  padding:10px 6px;border:1px solid #555;border-radius:8px;
-  color:inherit;text-align:center;text-decoration:none;font-size:.9rem;font-weight:800;
-  line-height:1.2
- }
- .mobile-action-bar a:first-child{background:var(--white);color:var(--black);border-color:var(--white)}
- .mobile-action-bar a:focus-visible{outline-color:var(--white);outline-offset:2px}
 }
