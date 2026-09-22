@@ -111,6 +111,23 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 .about-team .person h3{font-size:1.3rem}.about-team .person{padding-block:18px}
 .about-team .button{margin-top:20px}.about-team .subtle-link{margin-top:20px}
 .network-page{margin-bottom:0;padding-top:35px;border-top:0;background:#fff}
+.offer-overview{padding-top:35px}
+.offer-intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:70px;align-items:end;margin-bottom:46px}
+.offer-intro h1{margin-top:18px}
+.offer-intro>p{color:var(--muted);font-size:1.08rem;max-width:560px;justify-self:end}
+.offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.offer-card{min-width:0;padding:34px;border:1px solid var(--line);border-radius:18px;background:#f4f4f4;display:flex;flex-direction:column;align-items:flex-start}
+.offer-card-dark{background:#050505;color:#fff;border-color:#050505}
+.offer-number{font-size:.78rem;font-weight:800;letter-spacing:.12em;border-bottom:2px solid currentColor;padding-bottom:7px;margin-bottom:34px}
+.offer-card .eyebrow{color:inherit}
+.offer-card h2{font-size:clamp(1.75rem,2.5vw,2.45rem);line-height:1.08;letter-spacing:-.04em;margin:15px 0 18px}
+.offer-card>p:not(.eyebrow){color:var(--muted);font-size:.94rem;margin-bottom:28px}
+.offer-card-dark>p:not(.eyebrow){color:#d4d4d4}
+.offer-card .button{width:100%;margin-top:auto}
+.offer-detail{background:#f4f4f4;border-block:1px solid var(--line);scroll-margin-top:110px}
+.offer-detail .detail-layout{padding-block:75px}
+.detail-copy .offer-detail-title{font-size:clamp(2.7rem,5vw,4.8rem);line-height:1.08;letter-spacing:-.05em;margin:18px 0 25px}
+.offer-detail .detail-copy h3{font-size:1.45rem;margin-top:32px}
 .subpage .support{padding-top:35px}.subpage .support h1{margin:20px 0 27px}
 .donation-details{padding-top:45px}.donation-details>.detail-copy{margin:auto;max-width:820px}
 .donation-details .detail-copy>h2{font-size:2.5rem;margin-top:0}
@@ -123,6 +140,8 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 .footer-bottom>div{flex-wrap:wrap}
 @media(max-width:1320px){.header{position:relative;flex-wrap:wrap}.header .menu-toggle{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 13px;margin-left:auto}.header nav{display:none;position:absolute;top:90px;left:25px;right:25px;padding:20px;background:#fff;box-shadow:0 15px 25px #00000020;border:1px solid var(--line);border-radius:12px;z-index:10;align-items:stretch}.header nav.open{display:flex;flex-direction:column;gap:0}.header nav a{padding:13px;font-size:1rem}.header nav a[aria-current="page"]{box-shadow:none;background:#eee;border-radius:5px;padding:13px}.header-contact{display:inline-flex!important}.detail-layout,.contact-layout{gap:40px}.teaser-grid{gap:40px}}
 @media(max-width:750px){.detail-layout,.contact-layout,.teaser-grid{grid-template-columns:1fr;gap:30px}.detail-layout,.contact-layout{padding-top:20px;padding-bottom:50px}.detail-aside{margin-top:0;display:grid;grid-template-columns:1fr 1fr}.detail-aside>img{height:100%;aspect-ratio:auto}.detail-aside>div{padding:25px}.contact-info{margin-top:0}.home-news{display:block;padding-bottom:50px}.home-news .button{margin-top:25px;white-space:normal}.home-program h2{font-size:3.5rem}.home-about h2{font-size:2.8rem}.home-community-image{height:300px}.subpage h1{font-size:clamp(2.5rem,8vw,3.8rem)}.subpage .community{padding-top:20px}}
+@media(max-width:1000px){.offer-grid{grid-template-columns:1fr 1fr}.offer-card:first-child{grid-column:1/-1}.offer-intro{gap:40px}}
+@media(max-width:700px){.offer-intro,.offer-grid{grid-template-columns:1fr}.offer-intro{gap:24px;margin-bottom:32px}.offer-intro>p{justify-self:start}.offer-card:first-child{grid-column:auto}.offer-card{padding:28px 24px}.offer-detail .detail-layout{padding-block:50px}}
 @media(max-width:450px){.header{gap:10px}.header-contact{font-size:.76rem!important;padding:10px 11px!important;gap:7px!important}.header .menu-toggle{font-size:.76rem;padding:10px;gap:7px}.header .brand{font-size:.83rem;gap:7px}.header .brand small{font-size:.5rem}.header .brand-logo{width:40px;height:40px}.header{padding-inline:18px}.header nav{top:80px;left:18px;right:18px}.detail-aside{grid-template-columns:1fr}.detail-aside>img{aspect-ratio:4/3}.contact-info{padding:25px}}
 
 /* Originalporträts und Partnermarken. */
@@ -273,4 +292,3 @@ nav a:hover,.nav-contact:hover{box-shadow:0 3px 0 var(--black)}
 #contact-form input:focus-visible,#contact-form select:focus-visible,#contact-form textarea:focus-visible{outline-offset:3px}
 #contact-form .form-note{margin-top:22px;margin-bottom:18px;line-height:1.55}
 #contact-form .form-note+.button{margin-top:0}
-
